@@ -1,0 +1,14 @@
+How to make 'test2fd.img.org'
+
+1. dd if=/dev/zero of=test2fd.img.org bs=1k count=1440
+
+2. su (switch to root)
+
+3. losetup /dev/loop0 test2fd.img.org
+
+4. mke2fs /dev/loop0
+
+5. losetup -d /dev/loop0
+
+6. exit (exit root)
+
